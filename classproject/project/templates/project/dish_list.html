@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<h1> Top 10 Meal </h1>
+<ul>
+  {% for dish in latest_dishes_list %}
+    <li><a href="{% url 'dish_detail' dish.id %}">
+    {{ dish.name }}</a></li>
+  {% empty %}<li>Sorry, no Meals Added yet.</li>
+  {% endfor %}
+</ul>
+
+<h2>
+  <a href="{% url 'dish_create' %}"><button type="submit" class="button hollow topbar-responsive-button">Add Meal</button></a>
+</h2>
+
+
+{% endblock %}

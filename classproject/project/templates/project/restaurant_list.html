@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<h1> Top 10 Restaurant </h1>
+<ul>
+  {% for restaurant in latest_restaurant_list %}
+    <li><a href="{% url 'restaurant_detail' restaurant.id %}">
+    {{ restaurant.name }}</a></li>
+  {% empty %}<li>Sorry, no restaurants Added yet.</li>
+  {% endfor %}
+</ul>
+
+<h2>
+  <a href="{% url 'restaurant_create' %}"><button type="submit" class="button hollow topbar-responsive-button">Add Restaurant</button></a>
+</h2>
+
+
+{% endblock %}

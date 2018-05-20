@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+
+
+{% block content %}
+
+
+
+
+
+
+    <nav class="top-bar topbar-responsive">
+      <div class="top-bar-title">
+        <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+        </span>
+        <a class="topbar-responsive-logo" href=" "><strong>Restaurant Food Reviewer</strong></a>
+      </div>
+      <div class="top-bar-center">
+      </div>
+      <div id="topbar-responsive" class="topbar-responsive-links">
+        <div class="top-bar-right">
+          <ul class="menu simple vertical medium-horizontal">
+    		<li><a href="{% url 'restaurant_list' %}">Review Restaurant</a></li>
+            <li><a href="{% url 'dish_list' %}">Review Meals</a></li>
+			<li><a href="Deals/">Place Order</a></li>
+			<li><a href="{% url 'chat' %}">Customer Support</a></li>
+            <li><a href="{% url 'logout' %}"> <button type="button" class="button hollow topbar-responsive-button">Logout</button></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+        <div class="hero-section">
+          <div class="hero-section-text">
+            <h1>Welcome</h1>
+            <h2>{% if user.is_authenticated %}
+		        {{ user.username }}!
+				{% else %}{% endif %}</h2>
+          </div>
+        </div>
+
+{% endblock %}
