@@ -1,0 +1,4 @@
+Lecture Notes
+Foundation Building blocks
+https://www.codementor.io/rogargon/simple-django-web-application-tutorial-du107rmn4
+https://scotch.io/@samuelo/how-to-build-a-chatroom-using-pusher-and-django
